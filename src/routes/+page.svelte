@@ -1,6 +1,8 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/Button/Button.svelte';
 	import Input from '$lib/components/Input/Input.svelte';
+
+	let inputVal = $state('This is input value');
 </script>
 
 <div class="flex flex-col gap-lg p-2xl">
@@ -56,6 +58,14 @@
 		<div class="flex gap-md">
 			<div>Error Input</div>
 			<Input size="md" placeholder="Small input" error />
+		</div>
+		<h2>Binding inputs to values</h2>
+		<div class="flex gap-md">
+			<div>Input bound to value:</div>
+			<Input size="md" bind:value={inputVal} />
+		</div>
+		<div class="flex gap-md">
+			<div>{inputVal}</div>
 		</div>
 	</div>
 </div>

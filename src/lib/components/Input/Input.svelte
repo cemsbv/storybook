@@ -4,8 +4,9 @@
 		error?: boolean;
 		placeholder?: string;
 		disabled?: boolean;
+		value?: string;
 	}
-	const { size, error, placeholder, disabled }: InputProps = $props();
+	let { size, error, placeholder, disabled, value = $bindable() }: InputProps = $props();
 
 	let inputClass = $state(
 		'border border-solid border-spacer-light rounded-sm text-black font-sm bg-white p-[12px] '
@@ -16,7 +17,7 @@
 	if (error) inputClass += ' error';
 </script>
 
-<input class={inputClass} {placeholder} {disabled} />
+<input class={inputClass} {placeholder} {disabled} bind:value />
 
 <style lang="scss">
 	input {
