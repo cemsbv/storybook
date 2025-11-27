@@ -1,9 +1,11 @@
 <script>
 	import Button from '$lib/components/Button/Button.svelte';
+	import Input from '$lib/components/Input/Input.svelte';
 </script>
 
 <div class="flex flex-col gap-lg p-2xl">
 	<h1>CEMS design system</h1>
+	<!-- A bunch of buttons -->
 	<div class="flex flex-col gap-md rounded-sm bg-white p-lg">
 		<h2>Buttons</h2>
 		<div class="flex gap-md">
@@ -29,10 +31,31 @@
 		</div>
 		<div class="flex gap-md">
 			<div>Disabled butons</div>
-			<Button variant="primary" size="md" disabled={true}>Primary</Button>
-			<Button variant="secondary" size="md" disabled={true}>Secondary</Button>
-			<Button variant="destructive" size="md" disabled={true}>Destructive</Button>
-			<Button variant="confirmative" size="md" disabled={true}>Confirmative</Button>
+			<Button variant="primary" size="md" disabled>Primary</Button>
+			<Button variant="secondary" size="md" disabled>Secondary</Button>
+			<Button variant="destructive" size="md" disabled>Destructive</Button>
+			<Button variant="confirmative" size="md" disabled>Confirmative</Button>
+		</div>
+	</div>
+
+	<!-- Input fields -->
+	<div class="flex flex-col gap-md rounded-sm bg-white p-lg">
+		<h2>Inputs</h2>
+		<div class="flex gap-md">
+			<div>Small input</div>
+			<Input size="sm" placeholder="Small input" />
+		</div>
+		<div class="flex gap-md">
+			<div>Medium input</div>
+			<Input size="md" placeholder="Medium input" />
+		</div>
+		<div class="flex gap-md">
+			<div>Disabled Input</div>
+			<Input size="md" placeholder="Small input" disabled />
+		</div>
+		<div class="flex gap-md">
+			<div>Error Input</div>
+			<Input size="md" placeholder="Small input" error />
 		</div>
 	</div>
 </div>
