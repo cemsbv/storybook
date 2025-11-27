@@ -9,7 +9,7 @@
 	let { size, error, placeholder, disabled, value = $bindable() }: InputProps = $props();
 
 	let inputClass = $state(
-		'border border-solid border-spacer-light rounded-sm text-black font-sm bg-white p-[12px] '
+		'border-1 border-solid border-spacer-light rounded-sm text-black font-sm bg-white p-[12px] '
 	);
 	if (size === 'sm') {
 		inputClass += ' py-sm';
@@ -21,11 +21,8 @@
 
 <style lang="scss">
 	input {
-		&.error {
-			border: solid 1px var(--color-brand-secondary);
-		}
-		&:focus:not(.error) {
-			outline: none;
+		&:focus {
+			outline: solid 1px var(--color-brand-primary);
 			border: solid 1px var(--color-brand-primary);
 		}
 		&:disabled {
@@ -33,8 +30,8 @@
 			cursor: not-allowed;
 			color: var(--color-border);
 		}
-		&:focus.error {
-			outline: none;
+		&.error {
+			outline: solid 1px var(--color-brand-secondary);
 			border: solid 1px var(--color-brand-secondary);
 		}
 	}

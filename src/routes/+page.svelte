@@ -1,8 +1,17 @@
 <script lang="ts">
 	import Button from '$lib/components/Button/Button.svelte';
 	import Input from '$lib/components/Input/Input.svelte';
+	import Dropdown from '$lib/components/Dropdown/Dropdown.svelte';
 
 	let inputVal = $state('This is input value');
+
+	let dropdownSelected = $state(null);
+
+	const options = [
+		{ label: 'Apple', value: 'apple' },
+		{ label: 'Banana', value: 'banana' },
+		{ label: 'Cherry', value: 'cherry' }
+	];
 </script>
 
 <div class="flex flex-col gap-lg p-2xl">
@@ -37,6 +46,49 @@
 			<Button variant="secondary" size="md" disabled>Secondary</Button>
 			<Button variant="destructive" size="md" disabled>Destructive</Button>
 			<Button variant="confirmative" size="md" disabled>Confirmative</Button>
+		</div>
+	</div>
+
+	<!-- Dropdown -->
+	<div class="flex flex-col gap-md rounded-sm bg-white p-lg">
+		<h2>Dropdown</h2>
+		<div class="flex gap-md">
+			<div>Small dropdown</div>
+			<Dropdown
+				size="sm"
+				bind:value={dropdownSelected}
+				items={options}
+				placeholder="Select a fruit..."
+			/>
+		</div>
+		<div class="flex gap-md">
+			<div>Medium dropdown</div>
+			<Dropdown
+				size="md"
+				bind:value={dropdownSelected}
+				items={options}
+				placeholder="Select a fruit..."
+			/>
+		</div>
+		<div class="flex gap-md">
+			<div>Disabled dropdown</div>
+			<Dropdown
+				size="md"
+				bind:value={dropdownSelected}
+				items={options}
+				placeholder="Select a fruit..."
+				disabled
+			/>
+		</div>
+		<div class="flex gap-md">
+			<div>Error dropdown</div>
+			<Dropdown
+				size="md"
+				bind:value={dropdownSelected}
+				items={options}
+				error
+				placeholder="Select a fruit..."
+			/>
 		</div>
 	</div>
 
