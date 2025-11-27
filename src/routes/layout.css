@@ -30,7 +30,9 @@ h4 {
 
 @theme {
 	/* Colors */
+	--color-brand-primary-hover: #5553a1;
 	--color-brand-primary: #2a2889;
+	--color-brand-secondary-hover: #e66d42;
 	--color-brand-secondary: #e04913;
 
 	--color-bg-light-grey: #f4f5fa;

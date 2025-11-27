@@ -4,32 +4,85 @@
 	export interface ButtonProps {
 		variant: 'primary' | 'secondary' | 'destructive' | 'confirmative';
 		size: 'sm' | 'md' | 'lg';
+		disabled?: boolean;
 		children: Snippet;
 		onclick?: () => void;
 	}
-	let { variant, size, children, onclick }: ButtonProps = $props();
+	let { variant, size, disabled, children, onclick }: ButtonProps = $props();
 
 	// Style the button based on the variant and size props
-	let style = $state('rounded-sm text-black font-medium');
+	let buttonClass = $state('rounded-sm text-black font-medium');
 	if (variant === 'primary') {
-		style += ' bg-white border border-solid border-border ';
+		buttonClass += ' primary bg-white border border-solid border-border ';
 	} else if (variant === 'secondary') {
-		style += ' bg-white';
+		buttonClass += ' secondary bg-white';
 	} else if (variant === 'destructive') {
-		style += ' text-brand-secondary border border-solid border-brand-secondary';
+		buttonClass += ' destructive text-brand-secondary border border-solid border-brand-secondary';
 	} else if (variant === 'confirmative') {
-		style += ' bg-brand-primary text-white border-none';
+		buttonClass += ' confirmative bg-brand-primary text-white border-none';
 	}
 
+	if (disabled) buttonClass += ' disabled';
+
 	if (size === 'sm') {
-		style += ' px-md py-sm text-sm';
+		buttonClass += ' px-md py-[4px] text-sm';
 	} else if (size === 'md') {
-		style += ' px-lg py-sm text-sm';
+		buttonClass += ' px-lg py-sm text-sm';
 	} else if (size === 'lg') {
-		style += ' px-2xl py-md text-md';
+		buttonClass += ' px-2xl py-sm text-md';
 	}
 </script>
 
-<button class={style} {onclick}>
+<button class={buttonClass} {onclick}>
 	{@render children()}
 </button>
+
+<style lang="css">
+	button {
+		&.primary {
+			&.disabled {
+				border-color: var(--color-bg-disabled);
+				color: var(--color-bg-disabled);
+				cursor: not-allowed;
+			}
+			&:hover:not(.disabled) {
+				border-color: var(--color-spacer);
+				color: var(--color-hint);
+				cursor: pointer;
+			}
+		}
+		&.secondary {
+			&.disabled {
+				color: var(--color-bg-disabled);
+				cursor: not-allowed;
+			}
+			&:hover:not(.disabled) {
+				color: var(--color-hint);
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+		&.destructive {
+			&.disabled {
+				border-color: var(--color-bg-disabled);
+				color: var(--color-bg-disabled);
+				cursor: not-allowed;
+			}
+			&:hover:not(.disabled) {
+				border-color: var(--color-brand-secondary-hover);
+				color: var(--color-brand-secondary-hover);
+				cursor: pointer;
+			}
+		}
+		&.confirmative {
+			&.disabled {
+				background-color: var(--color-bg-disabled);
+				cursor: not-allowed;
+			}
+			&:hover:not(.disabled) {
+				background-color: var(--color-brand-primary-hover);
+				cursor: pointer;
+			}
+		}
+	}
+</style>
