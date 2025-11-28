@@ -1,0 +1,36 @@
+.input {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-spacer-light);
+  font-size: var(--text-sm);
+  color: var(--color-black-900);
+  background-color: var(--color-bg-white);
+
+  &:focus {
+    outline: 1px solid var(--color-brand-primary);
+    border-color: var(--color-brand-primary);
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: var(--color-bg-disabled);
+    color: var(--color-border);
+    cursor: not-allowed;
+  }
+
+  &.error {
+    outline: 1px solid var(--color-brand-secondary);
+    border-color: var(--color-brand-secondary);
+  }
+}
+
+/* Sizes */
+.input-sm {
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
+.input-md {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}

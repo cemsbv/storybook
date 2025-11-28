@@ -1,0 +1,60 @@
+<!-- docs/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Design System Test</title>
+    <link rel="stylesheet" href="../dist/design-system.css" />
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--color-bg-white);
+      "
+    >
+      <h2>Buttons</h2>
+      <div>
+        <button class="btn btn-primary btn-sm">Primary Small</button>
+        <button class="btn btn-primary btn-md">Primary Medium</button>
+        <button class="btn btn-primary btn-lg">Primary Large</button>
+        <button class="btn btn-primary btn-md" disabled>
+          Primary Disabled
+        </button>
+      </div>
+      <div>
+        <button class="btn btn-secondary btn-sm">Secondary Small</button>
+        <button class="btn btn-secondary btn-md">Secondary Medium</button>
+        <button class="btn btn-secondary btn-lg">Secondary Large</button>
+        <button class="btn btn-secondary btn-md" disabled>
+          Secondary Disabled
+        </button>
+      </div>
+      <div>
+        <button class="btn btn-confirmative btn-sm">Confirmative Small</button>
+        <button class="btn btn-confirmative btn-md">Confirmative Medium</button>
+        <button class="btn btn-confirmative btn-lg">Confirmative Large</button>
+        <button class="btn btn-confirmative btn-md" disabled>
+          Confirmative Disabled
+        </button>
+      </div>
+      <div>
+        <button class="btn btn-destructive btn-sm">Destructive Small</button>
+        <button class="btn btn-destructive btn-md">Destructive Medium</button>
+        <button class="btn btn-destructive btn-lg">Destructive Large</button>
+        <button class="btn btn-destructive btn-md" disabled>
+          Destructive Disabled
+        </button>
+      </div>
+    </div>
+
+    <input class="input input-md" placeholder="Type here..." />
+    <input class="input input-md error" placeholder="Error..." />
+  </body>
+</html>

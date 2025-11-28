@@ -1,0 +1,24 @@
+$colors: (
+  brand-primary: #2a2889,
+  brand-primary-hover: #5553a1,
+
+  brand-secondary: #e04913,
+  brand-secondary-hover: #e66d42,
+
+  bg-light-grey: #f4f5fa,
+  bg-white: #ffffff,
+  bg-disabled: #d4d2d5,
+
+  border: #aba7af,
+  black-900: #1a141f,
+  black-700: #34283e,
+  spacer: #d9d1e0,
+  spacer-light: #e5e0eb,
+  hint: #4b3a5a,
+);
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+}

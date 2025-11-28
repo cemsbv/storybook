@@ -1,0 +1,17 @@
+:root {
+  /* Base font */
+  --font-family-base: "Fira Sans", sans-serif;
+  --font-color-base: var(--color-black-900);
+  --background-color-base: var(--color-bg-light-grey);
+
+  /* Text sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 36px;
+
+  /* Headings weight */
+  --heading-font-weight: 500;
+}

@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "sass src/index.scss dist/design-system.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

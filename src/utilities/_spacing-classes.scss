@@ -1,0 +1,4 @@
+@use "../tokens/spacing" as *;
+@use "../mixins/spacing-utils";
+
+@include spacing-utils.generate-spacing-utilities($spacing-scale);

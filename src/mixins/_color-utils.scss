@@ -1,0 +1,7 @@
+@mixin text-color($token) {
+  color: var(--color-#{$token});
+}
+
+@mixin bg-color($token) {
+  background-color: var(--color-#{$token});
+}

@@ -1,0 +1,35 @@
+@mixin generate-spacing-utilities($scale) {
+  @each $key, $value in $scale {
+    .p-#{$key} {
+      padding: var(--spacing-#{$key});
+    }
+    .pt-#{$key} {
+      padding-top: var(--spacing-#{$key});
+    }
+    .pb-#{$key} {
+      padding-bottom: var(--spacing-#{$key});
+    }
+    .pl-#{$key} {
+      padding-left: var(--spacing-#{$key});
+    }
+    .pr-#{$key} {
+      padding-right: var(--spacing-#{$key});
+    }
+
+    .m-#{$key} {
+      margin: var(--spacing-#{$key});
+    }
+    .mt-#{$key} {
+      margin-top: var(--spacing-#{$key});
+    }
+    .mb-#{$key} {
+      margin-bottom: var(--spacing-#{$key});
+    }
+    .ml-#{$key} {
+      margin-left: var(--spacing-#{$key});
+    }
+    .mr-#{$key} {
+      margin-right: var(--spacing-#{$key});
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@use "../tokens/breakpoints" as bp;
+
+@mixin respond($size) {
+  $breakpoint: map-get(bp.$breakpoints, $size);
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}
