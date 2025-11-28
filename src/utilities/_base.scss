@@ -1,0 +1,108 @@
+/* ==============================
+   Base / Reset Styles
+   ============================== */
+
+/* 1. Reset box model and remove default spacing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Base HTML */
+html {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  background-color: var(--background-color-base);
+  color: var(--font-color-base);
+  line-height: 1.5;
+}
+
+/* 3. Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--heading-font-weight);
+  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--text-2xl);
+}
+h2 {
+  font-size: var(--text-xl);
+}
+h3 {
+  font-size: var(--text-lg);
+}
+h4 {
+  font-size: var(--text-md);
+}
+h5 {
+  font-size: var(--text-sm);
+}
+h6 {
+  font-size: var(--text-xs);
+}
+
+p {
+  font-size: var(--text-md);
+  //   margin-bottom: var(--spacing-md);
+  //   line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
+/* Links */
+a {
+  color: var(--color-brand-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Form elements */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+/* Utility to remove disabled pointer events if needed */
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}

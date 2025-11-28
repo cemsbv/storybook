@@ -1,35 +1,39 @@
+@use "../tokens/spacing" as *;
+
 @mixin generate-spacing-utilities($scale) {
   @each $key, $value in $scale {
     .p-#{$key} {
-      padding: var(--spacing-#{$key});
+      padding: $value;
     }
     .pt-#{$key} {
-      padding-top: var(--spacing-#{$key});
+      padding-top: $value;
     }
     .pb-#{$key} {
-      padding-bottom: var(--spacing-#{$key});
+      padding-bottom: $value;
     }
     .pl-#{$key} {
-      padding-left: var(--spacing-#{$key});
+      padding-left: $value;
     }
     .pr-#{$key} {
-      padding-right: var(--spacing-#{$key});
+      padding-right: $value;
     }
 
     .m-#{$key} {
-      margin: var(--spacing-#{$key});
+      margin: $value;
     }
     .mt-#{$key} {
-      margin-top: var(--spacing-#{$key});
+      margin-top: $value;
     }
     .mb-#{$key} {
-      margin-bottom: var(--spacing-#{$key});
+      margin-bottom: $value;
     }
     .ml-#{$key} {
-      margin-left: var(--spacing-#{$key});
+      margin-left: $value;
     }
     .mr-#{$key} {
-      margin-right: var(--spacing-#{$key});
+      margin-right: $value;
     }
   }
 }
+
+@include generate-spacing-utilities($spacing-scale);

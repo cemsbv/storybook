@@ -1,7 +1,22 @@
-@mixin text-color($token) {
-  color: var(--color-#{$token});
+@use "../tokens/colors" as *;
+
+@mixin generate-color-utilities($colors-map) {
+  @each $name, $value in $colors-map {
+    // Background color
+    .bg-color-#{$name} {
+      background-color: var(--color-#{$name});
+    }
+
+    // Text color
+    .text-color-#{$name} {
+      color: var(--color-#{$name});
+    }
+
+    // Border color
+    .border-color-#{$name} {
+      border-color: var(--color-#{$name});
+    }
+  }
 }
 
-@mixin bg-color($token) {
-  background-color: var(--color-#{$token});
-}
+@include generate-color-utilities($colors-map);

@@ -1,0 +1,11 @@
+@use "../tokens/radius" as *;
+
+@mixin generate-radius-utilities($scale) {
+  @each $key, $value in $scale {
+    .rounded-#{$key} {
+      border-radius: $value;
+    }
+  }
+}
+
+@include generate-radius-utilities($radius-scale);

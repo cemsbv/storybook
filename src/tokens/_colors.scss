@@ -1,13 +1,17 @@
-$colors: (
+$colors-map: (
   brand-primary: #2a2889,
   brand-primary-hover: #5553a1,
+  brand-primary-dark: #13124e,
 
   brand-secondary: #e04913,
-  brand-secondary-hover: #e66d42,
+  // brand-secondary-hover: #e66d42,
+  brand-secondary-hover: #ffd8ca,
+  brand-secondary-click: #ffb498,
+  brand-secondary-dark: #7a2a0a,
 
-  bg-light-grey: #f4f5fa,
-  bg-white: #ffffff,
-  bg-disabled: #d4d2d5,
+  brand-white: #ffffff,
+  brand-light-grey: #f4f5fa,
+  disabled: #d4d2d5,
 
   border: #aba7af,
   black-900: #1a141f,
@@ -18,7 +22,7 @@ $colors: (
 );
 
 :root {
-  @each $name, $value in $colors {
+  @each $name, $value in $colors-map {
     --color-#{$name}: #{$value};
   }
 }
