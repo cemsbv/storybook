@@ -1,5 +1,5 @@
 <!-- docs/index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,54 +7,65 @@
     <link rel="stylesheet" href="../dist/design-system.css" />
   </head>
   <body>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-
+    <h1 class="m-xl">CEMS Design system</h1>
     <div
-      style="
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        background-color: var(--color-bg-white);
-      "
+      style="border: 1px solid var(--color-border)"
+      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm"
     >
       <h2>Buttons</h2>
-      <div>
-        <button class="btn btn-primary btn-sm">Primary Small</button>
-        <button class="btn btn-primary btn-md">Primary Medium</button>
-        <button class="btn btn-primary btn-lg">Primary Large</button>
-        <button class="btn btn-primary btn-md" disabled>
-          Primary Disabled
-        </button>
+      <div class="flex flex-row gap-md items-center">
+        <p>Small buttons</p>
+        <button class="btn btn-primary btn-sm">Primary</button>
+        <button class="btn btn-secondary btn-sm">Secondary</button>
+        <button class="btn btn-confirmative btn-sm">Confirmative</button>
+        <button class="btn btn-destructive btn-sm">Destructive</button>
       </div>
-      <div>
-        <button class="btn btn-secondary btn-sm">Secondary Small</button>
-        <button class="btn btn-secondary btn-md">Secondary Medium</button>
-        <button class="btn btn-secondary btn-lg">Secondary Large</button>
-        <button class="btn btn-secondary btn-md" disabled>
-          Secondary Disabled
-        </button>
+      <div class="flex flex-row gap-md items-center">
+        <p>Medium buttons</p>
+        <button class="btn btn-primary btn-md">Primary</button>
+        <button class="btn btn-secondary btn-md">Secondary</button>
+        <button class="btn btn-confirmative btn-md">Confirmative</button>
+        <button class="btn btn-destructive btn-md">Destructive</button>
       </div>
-      <div>
-        <button class="btn btn-confirmative btn-sm">Confirmative Small</button>
-        <button class="btn btn-confirmative btn-md">Confirmative Medium</button>
-        <button class="btn btn-confirmative btn-lg">Confirmative Large</button>
+      <div class="flex flex-row gap-md items-center">
+        <p>Large buttons</p>
+        <button class="btn btn-primary btn-lg">Primary</button>
+        <button class="btn btn-secondary btn-lg">Secondary</button>
+        <button class="btn btn-confirmative btn-lg">Confirmative</button>
+        <button class="btn btn-destructive btn-lg">Destructive</button>
+      </div>
+      <div class="flex flex-row gap-md items-center">
+        <p>Disabled buttons</p>
+        <button class="btn btn-primary btn-md" disabled>Primary</button>
+        <button class="btn btn-secondary btn-md" disabled>Secondary</button>
         <button class="btn btn-confirmative btn-md" disabled>
-          Confirmative Disabled
+          Confirmative
         </button>
-      </div>
-      <div>
-        <button class="btn btn-destructive btn-sm">Destructive Small</button>
-        <button class="btn btn-destructive btn-md">Destructive Medium</button>
-        <button class="btn btn-destructive btn-lg">Destructive Large</button>
-        <button class="btn btn-destructive btn-md" disabled>
-          Destructive Disabled
-        </button>
+        <button class="btn btn-destructive btn-md" disabled>Destructive</button>
       </div>
     </div>
 
-    <input class="input input-md" placeholder="Type here..." />
-    <input class="input input-md error" placeholder="Error..." />
+    <div
+      style="border: 1px solid var(--color-border)"
+      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm"
+    >
+      <h2>Inputs</h2>
+      <div class="flex flex-row gap-md items-center">
+        <p>Small input</p>
+        <input class="input input-sm" placeholder="Type here..." />
+      </div>
+      <div class="flex flex-row gap-md items-center">
+        <p>Medium input</p>
+        <input class="input input-md" placeholder="Type here..." />
+      </div>
+      <div class="flex flex-row gap-md items-center">
+        <p>Error input</p>
+        <input class="input input-md error" placeholder="Error..." />
+      </div>
+      <div class="flex flex-row gap-md items-center">
+        <p>Disabled input</p>
+        <input class="input input-md" disabled placeholder="Error..." />
+      </div>
+    </div>
   </body>
 </html>

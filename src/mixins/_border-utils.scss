@@ -1,0 +1,14 @@
+@use "../tokens/borders" as *;
+
+@mixin generate-border-utilities($color, $scale) {
+  @each $key, $value in $scale {
+    .border-#{$key} {
+      border: $value solid $color;
+    }
+    .border-w-#{$key} {
+      border-width: $value;
+    }
+  }
+}
+
+@include generate-border-utilities($border-scale);

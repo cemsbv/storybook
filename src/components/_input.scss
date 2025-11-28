@@ -13,7 +13,7 @@
 
   &.disabled,
   &:disabled {
-    background-color: var(--color-bg-disabled);
+    background-color: var(--color-disabled);
     color: var(--color-border);
     cursor: not-allowed;
   }
