@@ -13,12 +13,6 @@
 .justify-center {
   justify-content: center;
 }
-.gap-xs {
-  gap: var(--spacing-xs);
-}
-.gap-sm {
-  gap: var(--spacing-sm);
-}
-.gap-md {
-  gap: var(--spacing-md);
+.justify-between {
+  justify-content: space-between;
 }

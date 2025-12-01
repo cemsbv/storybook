@@ -33,6 +33,10 @@
     .mr-#{$key} {
       margin-right: $value;
     }
+
+    .gap-#{$key} {
+      gap: $value;
+    }
   }
 }
 
