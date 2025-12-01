@@ -1,9 +1,9 @@
 @use "../tokens/borders" as *;
 
-@mixin generate-border-utilities($color, $scale) {
+@mixin generate-border-utilities($scale) {
   @each $key, $value in $scale {
     .border-#{$key} {
-      border: $value solid $color;
+      border: $value solid var(--color-border);
     }
     .border-w-#{$key} {
       border-width: $value;

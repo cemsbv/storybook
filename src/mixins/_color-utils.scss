@@ -4,17 +4,17 @@
   @each $name, $value in $colors-map {
     // Background color
     .bg-color-#{$name} {
-      background-color: var(--color-#{$name});
+      background-color: $value;
     }
 
     // Text color
     .text-color-#{$name} {
-      color: var(--color-#{$name});
+      color: $value;
     }
 
     // Border color
     .border-color-#{$name} {
-      border-color: var(--color-#{$name});
+      border-color: $value;
     }
   }
 }
