@@ -1,0 +1,11 @@
+@use "../tokens/typography" as *;
+
+@mixin generate-typography-utilities($scale) {
+  @each $key, $value in $scale {
+    .text-#{$key} {
+      font-size: $value;
+    }
+  }
+}
+
+@include generate-typography-utilities($text-sizes);
