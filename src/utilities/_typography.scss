@@ -1,10 +1,11 @@
-body {
+body,
+label,
+p,
+span {
   font-family: var(--font-family-base);
-  background-color: var(--background-color-base);
   color: var(--font-color-base);
   margin: 0;
   margin-block: 0;
-  // line-height: 1.5;
 }
 
 /* Headings */

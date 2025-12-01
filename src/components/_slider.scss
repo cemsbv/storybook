@@ -1,0 +1,95 @@
+$slider-width-number: 350; // important: pure number
+$slider-width: #{$slider-width-number}px;
+
+$slider-height: 0.5rem;
+
+$background-slider: var(--color-spacer-light); // unfilled
+$background-filled-slider: var(--color-brand-primary); // filled
+
+$thumb-size: 20px;
+$thumb-radius: 50%;
+$thumb-background: var(--color-brand-primary);
+$thumb-border: 5px solid var(--color-brand-white);
+
+// This controls how the shadow stretches left
+$shadow-offset: -10px; // tune this based on your thumb border/size
+
+// Make the long shadow
+@function makelongshadow($color, $offset) {
+  $shadow: 1px 0 0 $offset #{$color};
+
+  @for $i from 2 through $slider-width-number {
+    $shadow:
+      #{$shadow},
+      #{$i}px 0 0 $offset #{$color};
+  }
+
+  @return $shadow;
+}
+
+input[type="range"],
+.slider {
+  width: $slider-width;
+  height: $slider-height;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  //   overflow: hidden;
+  //   display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  background: $background-slider; // filled part
+
+  &:focus {
+    outline: none;
+  }
+
+  // WEBKIT TRACK
+  &::-webkit-slider-runnable-track {
+    height: $slider-height;
+  }
+
+  // WEBKIT THUMB
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: $thumb-size;
+    height: $thumb-size;
+    margin-top: calc((#{$slider-height} - #{$thumb-size}) / 2);
+    border-radius: $thumb-radius;
+    background: $thumb-background;
+    border: $thumb-border;
+    box-shadow: makelongshadow($background-filled-slider, $shadow-offset);
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-md);
+  }
+
+  // FIREFOX
+  &::-moz-range-track {
+    height: $slider-height;
+    background: $background-slider;
+  }
+
+  &::-moz-range-progress {
+    height: $slider-height;
+    background: $background-filled-slider;
+  }
+
+  &::-moz-range-thumb {
+    width: $thumb-size;
+    height: $thumb-size;
+    border-radius: $thumb-radius;
+    background: $thumb-background;
+    border: $thumb-border;
+    box-shadow: makelongshadow($background-slider, $shadow-offset);
+  }
+
+  // IE (legacy)
+  &::-ms-fill-lower {
+    background: $background-filled-slider;
+  }
+
+  &::-ms-fill-upper {
+    background: $background-slider;
+  }
+}
