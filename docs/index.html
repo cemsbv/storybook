@@ -1,5 +1,5 @@
 <!-- docs/index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,6 +14,8 @@
   </head>
   <body>
     <h1 class="m-xl">CEMS Design system</h1>
+
+    <!-- Buttons -->
     <div
       class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
     >
@@ -50,28 +52,7 @@
       </div>
     </div>
 
-    <div
-      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
-    >
-      <h2>Inputs</h2>
-      <div class="flex flex-row gap-md items-center">
-        <p>Small input</p>
-        <input class="input input-sm" placeholder="Type here..." />
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Medium input</p>
-        <input class="input input-md" placeholder="Type here..." />
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Error input</p>
-        <input class="input input-md error" placeholder="Error..." />
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Disabled input</p>
-        <input class="input input-md" disabled placeholder="Error..." />
-      </div>
-    </div>
-
+    <!-- Dropdowns -->
     <div
       class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
     >
@@ -120,16 +101,59 @@
       </div>
     </div>
 
+    <!-- Inputs -->
+    <div
+      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+    >
+      <h2>Inputs</h2>
+      <div class="flex flex-row gap-md items-center">
+        <p>Small input</p>
+        <input class="input input-sm" placeholder="Type here..." />
+      </div>
+      <div class="flex flex-row gap-md items-center">
+        <p>Medium input</p>
+        <input class="input input-md" placeholder="Type here..." />
+      </div>
+      <div class="flex flex-row gap-md items-center">
+        <p>Error input</p>
+        <input class="input input-md error" placeholder="Error..." />
+      </div>
+      <div class="flex flex-row gap-md items-center">
+        <p>Disabled input</p>
+        <input class="input input-md" disabled placeholder="Error..." />
+      </div>
+    </div>
+
+    <!-- Sliders -->
     <div
       class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
     >
       <h2>Sliders</h2>
-      <div class="flex flex-row gap-md items-center">
-        <p>Slider</p>
-        <input type="range" min="1" max="100" value="50" class="slider" />
+      <div class="flex flex-row gap-4xl">
+        <div class="flex flex-col gap-md items-start">
+          <p>Slider</p>
+          <label>
+            <input type="range" min="0" max="100" step="1" value="20" />
+          </label>
+        </div>
+        <div class="flex flex-col gap-md items-start">
+          <p>Slider with tooltip</p>
+          <label>
+            <input
+              type="range"
+              id="one"
+              min="0"
+              max="100"
+              step="1"
+              value="20"
+            />
+            <output for="one" style="--min: 0; --max: 100"></output>
+          </label>
+        </div>
       </div>
     </div>
 
+    <!-- Checkboxes -->
     <div
       class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
     >
