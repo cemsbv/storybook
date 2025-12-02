@@ -10,12 +10,15 @@
 }
 
 label {
-  --c: var(--color-brand-primary); /* slider color */
-  --g: round(0.25rem, 1px); /* the gap */
-  --l: round(0.25rem, 1px); /* line thickness*/
-  --s: round(1.25rem, 1px); /* thumb size*/
+  --c: var(--color-brand-primary); /* slider color of left progress */
+  --g: round(
+    0.25rem,
+    1px
+  ); /* the width of gap between slider thumb and track */
+  --l: round(0.25rem, 1px); /* slider track thickness*/
+  --s: round(1.25rem, 1px); /* thumb size (radius) */
   --t: round(0.5rem, 1px); /* tooltip tail size */
-  --r: round(0.25rem, 1px); /* tooltip radius */
+  --r: round(0.25rem, 1px); /* tooltip border radius */
 
   timeline-scope: --thumb-view;
   position: relative; /* No, It's not useless so don't remove it (or remove it and see what happens) */
@@ -133,8 +136,9 @@ output.bottom:before {
   }
 }
 
+// Do not display on unsupported browsers
 @supports not (anchor-name: ---) {
   output {
-    // display: none;
+    display: none;
   }
 }
