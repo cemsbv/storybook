@@ -1,0 +1,107 @@
+select {
+  appearance: base-select;
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: 0.2s;
+  width: 15rem;
+  overflow: hidden;
+
+  // Styling the dropdown arrow icon
+  &::picker-icon {
+    color: var(--color-hint);
+    transition: 0.2s rotate;
+  }
+
+  &:open::picker-icon {
+    rotate: 180deg;
+  }
+
+  &:hover:not(:disabled) {
+    outline: 1px solid var(--color-border);
+  }
+
+  option {
+    background: var(--color-brand-white);
+    padding: 0.75rem;
+    transition: 0.2s;
+    border-bottom: 1px solid var(--color-border);
+
+    &:first-of-type {
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+      border: none;
+    }
+
+    &:hover {
+      background: var(--color-spacer-light);
+    }
+
+    &:checked {
+      font-weight: 600;
+    }
+
+    &::checkmark {
+      order: 1;
+      margin-left: auto;
+      content: "";
+    }
+  }
+
+  &.dropdown-sm {
+    padding: 0.5rem 0.75rem;
+
+    option {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+
+  &.error {
+    border: 2px solid var(--color-brand-secondary);
+    &:hover {
+      outline: 1px solid var(--color-brand-secondary);
+    }
+  }
+
+  &:disabled {
+    background: var(--color-disabled);
+    color: var(--color-border);
+    border-color: var(--color-spacer-light);
+    cursor: not-allowed;
+
+    &::picker-icon {
+      color: var(--color-border);
+    }
+  }
+
+  // Styling the popup dropdown list (only works in some browsers)
+  &::picker(select) {
+    appearance: base-select;
+    border: 1px solid var(--color-border);
+    background: var(--color-brand-white);
+    border-radius: var(--radius-sm);
+    top: calc(anchor(bottom) + 0.25rem);
+    left: anchor(0);
+    bottom: calc(anchor(top) + 0.25rem + auto);
+  }
+}
+
+// Smooth fade-in animation
+::picker(select) {
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+::picker(select):popover-open {
+  opacity: 1;
+}
+@starting-style {
+  ::picker(select):popover-open {
+    opacity: 0;
+  }
+}
