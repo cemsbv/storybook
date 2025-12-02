@@ -13,305 +13,333 @@
     <link rel="stylesheet" href="../dist/design-system.css" />
   </head>
   <body>
-    <h1 class="m-xl">CEMS Design system</h1>
+    <div class="flex flex-row gap-md">
+      <!-- Tree menu -->
+      <div class="w-2xs p-2xl">
+        <ul class="tree">
+          <li>
+            <input type="checkbox" id="item1" />
+            <label class="tree-item" for="item1">Components</label>
+            <ul>
+              <li class="tree-item">Button</li>
+              <li class="tree-item">Input</li>
+              <li class="tree-item">Dropdown</li>
+              <li class="tree-item">Sliders</li>
+              <li class="tree-item">Checkboxes</li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="item2" />
+            <label class="tree-item" for="item2">Data Display</label>
+            <ul>
+              <li class="tree-item">Table</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h1 class="m-xl">CEMS Design system</h1>
+        <!-- Buttons -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Buttons</h2>
+          <div class="flex flex-row gap-md items-center">
+            <p>Small buttons</p>
+            <button class="btn btn-primary btn-sm">Primary</button>
+            <button class="btn btn-secondary btn-sm">Secondary</button>
+            <button class="btn btn-confirmative btn-sm">Confirmative</button>
+            <button class="btn btn-destructive btn-sm">Destructive</button>
+          </div>
+          <div class="flex flex-row gap-md items-center">
+            <p>Medium buttons</p>
+            <button class="btn btn-primary btn-md">Primary</button>
+            <button class="btn btn-secondary btn-md">Secondary</button>
+            <button class="btn btn-confirmative btn-md">Confirmative</button>
+            <button class="btn btn-destructive btn-md">Destructive</button>
+          </div>
+          <div class="flex flex-row gap-md items-center">
+            <p>Large buttons</p>
+            <button class="btn btn-primary btn-lg">Primary</button>
+            <button class="btn btn-secondary btn-lg">Secondary</button>
+            <button class="btn btn-confirmative btn-lg">Confirmative</button>
+            <button class="btn btn-destructive btn-lg">Destructive</button>
+          </div>
+          <div class="flex flex-row gap-md items-center">
+            <p>Disabled buttons</p>
+            <button class="btn btn-primary btn-md" disabled>Primary</button>
+            <button class="btn btn-secondary btn-md" disabled>Secondary</button>
+            <button class="btn btn-confirmative btn-md" disabled>
+              Confirmative
+            </button>
+            <button class="btn btn-destructive btn-md" disabled>
+              Destructive
+            </button>
+          </div>
+        </div>
 
-    <!-- Buttons -->
-    <div
-      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
-    >
-      <h2>Buttons</h2>
-      <div class="flex flex-row gap-md items-center">
-        <p>Small buttons</p>
-        <button class="btn btn-primary btn-sm">Primary</button>
-        <button class="btn btn-secondary btn-sm">Secondary</button>
-        <button class="btn btn-confirmative btn-sm">Confirmative</button>
-        <button class="btn btn-destructive btn-sm">Destructive</button>
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Medium buttons</p>
-        <button class="btn btn-primary btn-md">Primary</button>
-        <button class="btn btn-secondary btn-md">Secondary</button>
-        <button class="btn btn-confirmative btn-md">Confirmative</button>
-        <button class="btn btn-destructive btn-md">Destructive</button>
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Large buttons</p>
-        <button class="btn btn-primary btn-lg">Primary</button>
-        <button class="btn btn-secondary btn-lg">Secondary</button>
-        <button class="btn btn-confirmative btn-lg">Confirmative</button>
-        <button class="btn btn-destructive btn-lg">Destructive</button>
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Disabled buttons</p>
-        <button class="btn btn-primary btn-md" disabled>Primary</button>
-        <button class="btn btn-secondary btn-md" disabled>Secondary</button>
-        <button class="btn btn-confirmative btn-md" disabled>
-          Confirmative
-        </button>
-        <button class="btn btn-destructive btn-md" disabled>Destructive</button>
-      </div>
-    </div>
+        <!-- Dropdowns -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Dropdown</h2>
+          <div class="flex flex-row gap-xl w-full">
+            <div class="flex flex-col gap-md">
+              <p>Small dropdown</p>
+              <form>
+                <select class="dropdown-sm">
+                  <option value="Option 1">
+                    <span>Option 1</span>
+                  </option>
+                  <option value="Option 2">
+                    <span>Option 2</span>
+                  </option>
+                  <option value="Option length">
+                    <span>Option 3</span>
+                  </option>
+                </select>
+              </form>
+            </div>
+            <div class="flex flex-col gap-md">
+              <p>Medium dropdown</p>
+              <select class="dropdown-md">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option length">Option 3</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-md">
+              <p>Error dropdown</p>
+              <select class="dropdown-md error">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option length">Option 3</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-md">
+              <p>Disabled dropdown</p>
+              <select class="dropdown-md" disabled>
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option length">Option 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
-    <!-- Dropdowns -->
-    <div
-      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
-    >
-      <h2>Dropdown</h2>
-      <div class="flex flex-row gap-xl w-full">
-        <div class="flex flex-col gap-md">
-          <p>Small dropdown</p>
-          <form>
-            <select class="dropdown-sm">
-              <option value="Option 1">
-                <span>Option 1</span>
-              </option>
-              <option value="Option 2">
-                <span>Option 2</span>
-              </option>
-              <option value="Option length">
-                <span>Option 3</span>
-              </option>
-            </select>
-          </form>
+        <!-- Inputs -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Inputs</h2>
+          <div class="flex flex-row gap-md items-center">
+            <p>Small input</p>
+            <input class="input input-sm" placeholder="Type here..." />
+          </div>
+          <div class="flex flex-row gap-md items-center">
+            <p>Medium input</p>
+            <input class="input input-md" placeholder="Type here..." />
+          </div>
+          <div class="flex flex-row gap-md items-center">
+            <p>Error input</p>
+            <input class="input input-md error" placeholder="Error..." />
+          </div>
+          <div class="flex flex-row gap-md items-center">
+            <p>Disabled input</p>
+            <input class="input input-md" disabled placeholder="Error..." />
+          </div>
         </div>
-        <div class="flex flex-col gap-md">
-          <p>Medium dropdown</p>
-          <select class="dropdown-md">
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option length">Option 3</option>
-          </select>
-        </div>
-        <div class="flex flex-col gap-md">
-          <p>Error dropdown</p>
-          <select class="dropdown-md error">
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option length">Option 3</option>
-          </select>
-        </div>
-        <div class="flex flex-col gap-md">
-          <p>Disabled dropdown</p>
-          <select class="dropdown-md" disabled>
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option length">Option 3</option>
-          </select>
-        </div>
-      </div>
-    </div>
 
-    <!-- Inputs -->
-    <div
-      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
-    >
-      <h2>Inputs</h2>
-      <div class="flex flex-row gap-md items-center">
-        <p>Small input</p>
-        <input class="input input-sm" placeholder="Type here..." />
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Medium input</p>
-        <input class="input input-md" placeholder="Type here..." />
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Error input</p>
-        <input class="input input-md error" placeholder="Error..." />
-      </div>
-      <div class="flex flex-row gap-md items-center">
-        <p>Disabled input</p>
-        <input class="input input-md" disabled placeholder="Error..." />
-      </div>
-    </div>
-
-    <!-- Sliders -->
-    <div
-      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
-    >
-      <h2>Sliders</h2>
-      <div class="flex flex-row gap-4xl">
-        <div class="flex flex-col gap-md items-start">
-          <p>Slider</p>
-          <label>
-            <input type="range" min="0" max="100" step="1" value="20" />
-          </label>
+        <!-- Sliders -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Sliders</h2>
+          <div class="flex flex-row gap-4xl">
+            <div class="flex flex-col gap-md items-start">
+              <p>Slider</p>
+              <label>
+                <input type="range" min="0" max="100" step="1" value="20" />
+              </label>
+            </div>
+            <div class="flex flex-col gap-md items-start">
+              <p>Slider with tooltip</p>
+              <label>
+                <input
+                  type="range"
+                  id="one"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="80"
+                />
+                <output for="one" style="--min: 0; --max: 100"></output>
+              </label>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col gap-md items-start">
-          <p>Slider with tooltip</p>
-          <label>
+
+        <!-- Checkboxes -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Checkboxes</h2>
+          <div class="flex flex-row gap-xs items-center">
+            <input type="checkbox" class="checkbox" name="checkbox-1" checked />
+            <label for="checkbox-1" class="text-sm">Default checkbox</label>
+          </div>
+
+          <div class="flex flex-row gap-xs items-center">
+            <input type="checkbox" class="checkbox error" name="checkbox-2" />
+            <label for="checkbox-2" class="text-sm">Error checkbox</label>
+          </div>
+
+          <div class="flex flex-row gap-xs items-center">
             <input
-              type="range"
-              id="one"
-              min="0"
-              max="100"
-              step="1"
-              value="80"
+              type="checkbox"
+              class="checkbox"
+              name="checkbox-3"
+              disabled
+              checked
             />
-            <output for="one" style="--min: 0; --max: 100"></output>
-          </label>
+            <label for="checkbox-3" class="text-sm">Disabled checkbox</label>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Table</h2>
+          <table class="max-w-3xl">
+            <tr>
+              <th>Bottoms</th>
+              <th>...</th>
+              <th>...</th>
+              <th>
+                <div class="flex justify-center">Actions</div>
+              </th>
+            </tr>
+            <tr>
+              <td class="editable">-5</td>
+              <td class="editable">1.5</td>
+              <td class="editable">...</td>
+              <td>
+                <div class="flex justify-center">
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#4B3A5A"
+                      d="M288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448L480 448C515.3 448 544 419.3 544 384L544 183.4C544 166 536.9 149.3 524.3 137.2L466.6 81.8C454.7 70.4 438.8 64 422.3 64L288 64zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L352 496L352 512L160 512L160 256L176 256L176 192L160 192z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#4B3A5A"
+                      d="M535.6 85.7C513.7 63.8 478.3 63.8 456.4 85.7L432 110.1L529.9 208L554.3 183.6C576.2 161.7 576.2 126.3 554.3 104.4L535.6 85.7zM236.4 305.7C230.3 311.8 225.6 319.3 222.9 327.6L193.3 416.4C190.4 425 192.7 434.5 199.1 441C205.5 447.5 215 449.7 223.7 446.8L312.5 417.2C320.7 414.5 328.2 409.8 334.4 403.7L496 241.9L398.1 144L236.4 305.7zM160 128C107 128 64 171 64 224L64 480C64 533 107 576 160 576L416 576C469 576 512 533 512 480L512 384C512 366.3 497.7 352 480 352C462.3 352 448 366.3 448 384L448 480C448 497.7 433.7 512 416 512L160 512C142.3 512 128 497.7 128 480L128 224C128 206.3 142.3 192 160 192L256 192C273.7 192 288 177.7 288 160C288 142.3 273.7 128 256 128L160 128z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#B93100"
+                      d="M232.7 69.9C237.1 56.8 249.3 48 263.1 48L377 48C390.8 48 403 56.8 407.4 69.9L416 96L512 96C529.7 96 544 110.3 544 128C544 145.7 529.7 160 512 160L128 160C110.3 160 96 145.7 96 128C96 110.3 110.3 96 128 96L224 96L232.7 69.9zM128 208L512 208L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 208zM216 272C202.7 272 192 282.7 192 296L192 488C192 501.3 202.7 512 216 512C229.3 512 240 501.3 240 488L240 296C240 282.7 229.3 272 216 272zM320 272C306.7 272 296 282.7 296 296L296 488C296 501.3 306.7 512 320 512C333.3 512 344 501.3 344 488L344 296C344 282.7 333.3 272 320 272zM424 272C410.7 272 400 282.7 400 296L400 488C400 501.3 410.7 512 424 512C437.3 512 448 501.3 448 488L448 296C448 282.7 437.3 272 424 272z"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="editable">-6.5</td>
+              <td class="editable">0.4</td>
+              <td class="editable">...</td>
+              <td>
+                <div class="flex justify-center">
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#4B3A5A"
+                      d="M288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448L480 448C515.3 448 544 419.3 544 384L544 183.4C544 166 536.9 149.3 524.3 137.2L466.6 81.8C454.7 70.4 438.8 64 422.3 64L288 64zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L352 496L352 512L160 512L160 256L176 256L176 192L160 192z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#4B3A5A"
+                      d="M535.6 85.7C513.7 63.8 478.3 63.8 456.4 85.7L432 110.1L529.9 208L554.3 183.6C576.2 161.7 576.2 126.3 554.3 104.4L535.6 85.7zM236.4 305.7C230.3 311.8 225.6 319.3 222.9 327.6L193.3 416.4C190.4 425 192.7 434.5 199.1 441C205.5 447.5 215 449.7 223.7 446.8L312.5 417.2C320.7 414.5 328.2 409.8 334.4 403.7L496 241.9L398.1 144L236.4 305.7zM160 128C107 128 64 171 64 224L64 480C64 533 107 576 160 576L416 576C469 576 512 533 512 480L512 384C512 366.3 497.7 352 480 352C462.3 352 448 366.3 448 384L448 480C448 497.7 433.7 512 416 512L160 512C142.3 512 128 497.7 128 480L128 224C128 206.3 142.3 192 160 192L256 192C273.7 192 288 177.7 288 160C288 142.3 273.7 128 256 128L160 128z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#B93100"
+                      d="M232.7 69.9C237.1 56.8 249.3 48 263.1 48L377 48C390.8 48 403 56.8 407.4 69.9L416 96L512 96C529.7 96 544 110.3 544 128C544 145.7 529.7 160 512 160L128 160C110.3 160 96 145.7 96 128C96 110.3 110.3 96 128 96L224 96L232.7 69.9zM128 208L512 208L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 208zM216 272C202.7 272 192 282.7 192 296L192 488C192 501.3 202.7 512 216 512C229.3 512 240 501.3 240 488L240 296C240 282.7 229.3 272 216 272zM320 272C306.7 272 296 282.7 296 296L296 488C296 501.3 306.7 512 320 512C333.3 512 344 501.3 344 488L344 296C344 282.7 333.3 272 320 272zM424 272C410.7 272 400 282.7 400 296L400 488C400 501.3 410.7 512 424 512C437.3 512 448 501.3 448 488L448 296C448 282.7 437.3 272 424 272z"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="editable">...</td>
+              <td class="editable">...</td>
+              <td class="editable">...</td>
+              <td>
+                <div class="flex justify-center">
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#4B3A5A"
+                      d="M288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448L480 448C515.3 448 544 419.3 544 384L544 183.4C544 166 536.9 149.3 524.3 137.2L466.6 81.8C454.7 70.4 438.8 64 422.3 64L288 64zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L352 496L352 512L160 512L160 256L176 256L176 192L160 192z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#4B3A5A"
+                      d="M535.6 85.7C513.7 63.8 478.3 63.8 456.4 85.7L432 110.1L529.9 208L554.3 183.6C576.2 161.7 576.2 126.3 554.3 104.4L535.6 85.7zM236.4 305.7C230.3 311.8 225.6 319.3 222.9 327.6L193.3 416.4C190.4 425 192.7 434.5 199.1 441C205.5 447.5 215 449.7 223.7 446.8L312.5 417.2C320.7 414.5 328.2 409.8 334.4 403.7L496 241.9L398.1 144L236.4 305.7zM160 128C107 128 64 171 64 224L64 480C64 533 107 576 160 576L416 576C469 576 512 533 512 480L512 384C512 366.3 497.7 352 480 352C462.3 352 448 366.3 448 384L448 480C448 497.7 433.7 512 416 512L160 512C142.3 512 128 497.7 128 480L128 224C128 206.3 142.3 192 160 192L256 192C273.7 192 288 177.7 288 160C288 142.3 273.7 128 256 128L160 128z"
+                    />
+                  </svg>
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                  >
+                    <path
+                      fill="#B93100"
+                      d="M232.7 69.9C237.1 56.8 249.3 48 263.1 48L377 48C390.8 48 403 56.8 407.4 69.9L416 96L512 96C529.7 96 544 110.3 544 128C544 145.7 529.7 160 512 160L128 160C110.3 160 96 145.7 96 128C96 110.3 110.3 96 128 96L224 96L232.7 69.9zM128 208L512 208L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 208zM216 272C202.7 272 192 282.7 192 296L192 488C192 501.3 202.7 512 216 512C229.3 512 240 501.3 240 488L240 296C240 282.7 229.3 272 216 272zM320 272C306.7 272 296 282.7 296 296L296 488C296 501.3 306.7 512 320 512C333.3 512 344 501.3 344 488L344 296C344 282.7 333.3 272 320 272zM424 272C410.7 272 400 282.7 400 296L400 488C400 501.3 410.7 512 424 512C437.3 512 448 501.3 448 488L448 296C448 282.7 437.3 272 424 272z"
+                    />
+                  </svg>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
-    </div>
-
-    <!-- Checkboxes -->
-    <div
-      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
-    >
-      <h2>Checkboxes</h2>
-      <div class="flex flex-row gap-xs items-center">
-        <input type="checkbox" class="checkbox" name="checkbox-1" checked />
-        <label for="checkbox-1" class="text-sm">Default checkbox</label>
-      </div>
-
-      <div class="flex flex-row gap-xs items-center">
-        <input type="checkbox" class="checkbox error" name="checkbox-2" />
-        <label for="checkbox-2" class="text-sm">Error checkbox</label>
-      </div>
-
-      <div class="flex flex-row gap-xs items-center">
-        <input
-          type="checkbox"
-          class="checkbox"
-          name="checkbox-3"
-          disabled
-          checked
-        />
-        <label for="checkbox-3" class="text-sm">Disabled checkbox</label>
-      </div>
-    </div>
-
-    <!-- Table -->
-    <div
-      class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
-    >
-      <h2>Table</h2>
-      <table class="max-w-3xl">
-        <tr>
-          <th>Bottoms</th>
-          <th>...</th>
-          <th>...</th>
-          <th>
-            <div class="flex justify-center">Actions</div>
-          </th>
-        </tr>
-        <tr>
-          <td class="editable">-5</td>
-          <td class="editable">1.5</td>
-          <td class="editable">...</td>
-          <td>
-            <div class="flex justify-center">
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#4B3A5A"
-                  d="M288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448L480 448C515.3 448 544 419.3 544 384L544 183.4C544 166 536.9 149.3 524.3 137.2L466.6 81.8C454.7 70.4 438.8 64 422.3 64L288 64zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L352 496L352 512L160 512L160 256L176 256L176 192L160 192z"
-                />
-              </svg>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#4B3A5A"
-                  d="M535.6 85.7C513.7 63.8 478.3 63.8 456.4 85.7L432 110.1L529.9 208L554.3 183.6C576.2 161.7 576.2 126.3 554.3 104.4L535.6 85.7zM236.4 305.7C230.3 311.8 225.6 319.3 222.9 327.6L193.3 416.4C190.4 425 192.7 434.5 199.1 441C205.5 447.5 215 449.7 223.7 446.8L312.5 417.2C320.7 414.5 328.2 409.8 334.4 403.7L496 241.9L398.1 144L236.4 305.7zM160 128C107 128 64 171 64 224L64 480C64 533 107 576 160 576L416 576C469 576 512 533 512 480L512 384C512 366.3 497.7 352 480 352C462.3 352 448 366.3 448 384L448 480C448 497.7 433.7 512 416 512L160 512C142.3 512 128 497.7 128 480L128 224C128 206.3 142.3 192 160 192L256 192C273.7 192 288 177.7 288 160C288 142.3 273.7 128 256 128L160 128z"
-                />
-              </svg>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#B93100"
-                  d="M232.7 69.9C237.1 56.8 249.3 48 263.1 48L377 48C390.8 48 403 56.8 407.4 69.9L416 96L512 96C529.7 96 544 110.3 544 128C544 145.7 529.7 160 512 160L128 160C110.3 160 96 145.7 96 128C96 110.3 110.3 96 128 96L224 96L232.7 69.9zM128 208L512 208L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 208zM216 272C202.7 272 192 282.7 192 296L192 488C192 501.3 202.7 512 216 512C229.3 512 240 501.3 240 488L240 296C240 282.7 229.3 272 216 272zM320 272C306.7 272 296 282.7 296 296L296 488C296 501.3 306.7 512 320 512C333.3 512 344 501.3 344 488L344 296C344 282.7 333.3 272 320 272zM424 272C410.7 272 400 282.7 400 296L400 488C400 501.3 410.7 512 424 512C437.3 512 448 501.3 448 488L448 296C448 282.7 437.3 272 424 272z"
-                />
-              </svg>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="editable">-6.5</td>
-          <td class="editable">0.4</td>
-          <td class="editable">...</td>
-          <td>
-            <div class="flex justify-center">
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#4B3A5A"
-                  d="M288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448L480 448C515.3 448 544 419.3 544 384L544 183.4C544 166 536.9 149.3 524.3 137.2L466.6 81.8C454.7 70.4 438.8 64 422.3 64L288 64zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L352 496L352 512L160 512L160 256L176 256L176 192L160 192z"
-                />
-              </svg>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#4B3A5A"
-                  d="M535.6 85.7C513.7 63.8 478.3 63.8 456.4 85.7L432 110.1L529.9 208L554.3 183.6C576.2 161.7 576.2 126.3 554.3 104.4L535.6 85.7zM236.4 305.7C230.3 311.8 225.6 319.3 222.9 327.6L193.3 416.4C190.4 425 192.7 434.5 199.1 441C205.5 447.5 215 449.7 223.7 446.8L312.5 417.2C320.7 414.5 328.2 409.8 334.4 403.7L496 241.9L398.1 144L236.4 305.7zM160 128C107 128 64 171 64 224L64 480C64 533 107 576 160 576L416 576C469 576 512 533 512 480L512 384C512 366.3 497.7 352 480 352C462.3 352 448 366.3 448 384L448 480C448 497.7 433.7 512 416 512L160 512C142.3 512 128 497.7 128 480L128 224C128 206.3 142.3 192 160 192L256 192C273.7 192 288 177.7 288 160C288 142.3 273.7 128 256 128L160 128z"
-                />
-              </svg>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#B93100"
-                  d="M232.7 69.9C237.1 56.8 249.3 48 263.1 48L377 48C390.8 48 403 56.8 407.4 69.9L416 96L512 96C529.7 96 544 110.3 544 128C544 145.7 529.7 160 512 160L128 160C110.3 160 96 145.7 96 128C96 110.3 110.3 96 128 96L224 96L232.7 69.9zM128 208L512 208L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 208zM216 272C202.7 272 192 282.7 192 296L192 488C192 501.3 202.7 512 216 512C229.3 512 240 501.3 240 488L240 296C240 282.7 229.3 272 216 272zM320 272C306.7 272 296 282.7 296 296L296 488C296 501.3 306.7 512 320 512C333.3 512 344 501.3 344 488L344 296C344 282.7 333.3 272 320 272zM424 272C410.7 272 400 282.7 400 296L400 488C400 501.3 410.7 512 424 512C437.3 512 448 501.3 448 488L448 296C448 282.7 437.3 272 424 272z"
-                />
-              </svg>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td class="editable">...</td>
-          <td class="editable">...</td>
-          <td class="editable">...</td>
-          <td>
-            <div class="flex justify-center">
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#4B3A5A"
-                  d="M288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448L480 448C515.3 448 544 419.3 544 384L544 183.4C544 166 536.9 149.3 524.3 137.2L466.6 81.8C454.7 70.4 438.8 64 422.3 64L288 64zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L352 496L352 512L160 512L160 256L176 256L176 192L160 192z"
-                />
-              </svg>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#4B3A5A"
-                  d="M535.6 85.7C513.7 63.8 478.3 63.8 456.4 85.7L432 110.1L529.9 208L554.3 183.6C576.2 161.7 576.2 126.3 554.3 104.4L535.6 85.7zM236.4 305.7C230.3 311.8 225.6 319.3 222.9 327.6L193.3 416.4C190.4 425 192.7 434.5 199.1 441C205.5 447.5 215 449.7 223.7 446.8L312.5 417.2C320.7 414.5 328.2 409.8 334.4 403.7L496 241.9L398.1 144L236.4 305.7zM160 128C107 128 64 171 64 224L64 480C64 533 107 576 160 576L416 576C469 576 512 533 512 480L512 384C512 366.3 497.7 352 480 352C462.3 352 448 366.3 448 384L448 480C448 497.7 433.7 512 416 512L160 512C142.3 512 128 497.7 128 480L128 224C128 206.3 142.3 192 160 192L256 192C273.7 192 288 177.7 288 160C288 142.3 273.7 128 256 128L160 128z"
-                />
-              </svg>
-              <svg
-                class="icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 640"
-              >
-                <path
-                  fill="#B93100"
-                  d="M232.7 69.9C237.1 56.8 249.3 48 263.1 48L377 48C390.8 48 403 56.8 407.4 69.9L416 96L512 96C529.7 96 544 110.3 544 128C544 145.7 529.7 160 512 160L128 160C110.3 160 96 145.7 96 128C96 110.3 110.3 96 128 96L224 96L232.7 69.9zM128 208L512 208L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 208zM216 272C202.7 272 192 282.7 192 296L192 488C192 501.3 202.7 512 216 512C229.3 512 240 501.3 240 488L240 296C240 282.7 229.3 272 216 272zM320 272C306.7 272 296 282.7 296 296L296 488C296 501.3 306.7 512 320 512C333.3 512 344 501.3 344 488L344 296C344 282.7 333.3 272 320 272zM424 272C410.7 272 400 282.7 400 296L400 488C400 501.3 410.7 512 424 512C437.3 512 448 501.3 448 488L448 296C448 282.7 437.3 272 424 272z"
-                />
-              </svg>
-            </div>
-          </td>
-        </tr>
-      </table>
     </div>
   </body>
   <style>
