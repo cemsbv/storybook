@@ -1,0 +1,20 @@
+@use "../tokens/sizing" as *;
+
+@mixin generate-sizing-utilities($scale) {
+  @each $key, $value in $scale {
+    .w-#{$key} {
+      width: $value;
+    }
+    .h-#{$key} {
+      height: $value;
+    }
+    .max-w-#{$key} {
+      max-width: $value;
+    }
+    .max-h-#{$key} {
+      max-height: $value;
+    }
+  }
+}
+
+@include generate-sizing-utilities($sizing-map);

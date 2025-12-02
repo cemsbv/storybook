@@ -100,9 +100,3 @@ button {
 button {
   cursor: pointer;
 }
-
-/* Utility to remove disabled pointer events if needed */
-.disabled {
-  pointer-events: none;
-  opacity: 0.6;
-}
