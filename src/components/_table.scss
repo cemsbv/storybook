@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  th {
+    border-top: 1px solid var(--color-spacer-light);
+    border-bottom: 1px solid var(--color-spacer-light);
+    text-align: start;
+    font-weight: 600;
+  }
+  td,
+  th {
+    padding: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  td {
+    &.editable:hover {
+      background: var(--color-brand-light-grey);
+      cursor: text;
+    }
+  }
+}
