@@ -22,4 +22,7 @@ table {
       cursor: text;
     }
   }
+  tr:nth-child(odd) {
+    background-color: var(--color-brand-light-grey);
+  }
 }
