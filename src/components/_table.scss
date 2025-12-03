@@ -1,10 +1,10 @@
+$rows-background: rgba(244, 245, 250, 0.5);
+
 table {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
   th {
-    border-top: var(--border-sm) solid var(--color-spacer-light);
-    border-bottom: var(--border-sm) solid var(--color-spacer-light);
     text-align: start;
     font-weight: 600;
   }
@@ -22,7 +22,10 @@ table {
       cursor: text;
     }
   }
-  tr:nth-child(odd) {
+  tr:has(td):nth-child(odd) {
+    background-color: $rows-background;
+  }
+  tr:has(th) {
     background-color: var(--color-brand-light-grey);
   }
 }
