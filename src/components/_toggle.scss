@@ -1,0 +1,52 @@
+$btn-width: 2.5rem;
+$btn-height: 1.5rem;
+$thumb-size: 1rem;
+$thumb-gap: 0.25rem;
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: $btn-width;
+  height: $btn-height;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-border);
+    transition: 0.4s;
+    border-radius: 1rem;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: $thumb-size;
+      width: $thumb-size;
+      left: $thumb-gap;
+      bottom: $thumb-gap;
+      background-color: #fff;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: var(--color-brand-primary);
+  }
+
+  input:checked + .slider:before {
+    transform: translateX($thumb-size);
+  }
+
+  input:disabled + .slider {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+  }
+}

@@ -89,38 +89,42 @@
 
     <div class="flex flex-row gap-md">
       <!-- Tree menu -->
-      <div class="w-2xs p-2xl">
-        <ul class="tree">
-          <li>
-            <input type="checkbox" id="item1" />
-            <label class="tree-item" for="item1">
-              <span class="flex flex-row items-center">
-                <svg class="icon"><use href="#icon-puzzle"></use></svg>
-                <span>Components</span>
-              </span>
-            </label>
-            <ul>
-              <li class="tree-item">Button</li>
-              <li class="tree-item">Input</li>
-              <li class="tree-item">Dropdown</li>
-              <li class="tree-item">Sliders</li>
-              <li class="tree-item">Checkboxes</li>
-            </ul>
-          </li>
-          <li>
-            <input type="checkbox" id="item2" />
-            <label class="tree-item" for="item2"
-              ><span class="flex flex-row items-center">
-                <svg class="icon"><use href="#icon-data"></use></svg>
-                <span>Data display</span>
-              </span></label
-            >
-            <ul>
-              <li class="tree-item">Table</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <aside class="w-2xs p-xl sticky top-0">
+        <div class="w-2xs p-2xl">
+          <ul class="tree">
+            <li>
+              <input type="checkbox" id="item1" />
+              <label class="tree-item" for="item1">
+                <span class="flex flex-row items-center">
+                  <svg class="icon"><use href="#icon-puzzle"></use></svg>
+                  <span>Components</span>
+                </span>
+              </label>
+              <ul>
+                <li class="tree-item">Button</li>
+                <li class="tree-item">Input</li>
+                <li class="tree-item">Dropdown</li>
+                <li class="tree-item">Sliders</li>
+                <li class="tree-item">Checkboxes</li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" id="item2" />
+              <label class="tree-item" for="item2"
+                ><span class="flex flex-row items-center">
+                  <svg class="icon"><use href="#icon-data"></use></svg>
+                  <span>Data display</span>
+                </span></label
+              >
+              <ul>
+                <li class="tree-item">Table</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Content -->
       <div>
         <h1 class="m-xl">CEMS Design system</h1>
         <!-- Buttons -->
@@ -247,17 +251,36 @@
               </label>
             </div>
             <div class="flex flex-col gap-md items-start">
+              <p>Slider with input box</p>
+              <div class="flex flex-col gap-sm">
+                <div class="flex flex-row justify-end">
+                  <input
+                    class="input input-sm"
+                    style="max-width: 4rem"
+                    placeholder="Type here..."
+                    value="20%"
+                  />
+                </div>
+                <label>
+                  <input type="range" min="0" max="100" step="1" value="20" />
+                </label>
+              </div>
+            </div>
+            <div class="flex flex-col gap-md items-start">
               <p>Slider with tooltip</p>
               <label>
                 <input
                   type="range"
-                  id="one"
+                  id="slider-tooltip"
                   min="0"
                   max="100"
                   step="1"
                   value="80"
                 />
-                <output for="one" style="--min: 0; --max: 100"></output>
+                <output
+                  for="slider-tooltip"
+                  style="--min: 0; --max: 100"
+                ></output>
               </label>
             </div>
           </div>
@@ -365,6 +388,27 @@
               </td>
             </tr>
           </table>
+        </div>
+
+        <!-- Toggle button -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Toggle button</h2>
+          <div class="flex flex-row gap-md items-start">
+            <span>Default switch</span>
+            <label class="toggle">
+              <input type="checkbox" />
+              <div class="slider"></div>
+            </label>
+          </div>
+          <div class="flex flex-row gap-md items-start">
+            <span>Disabled switch</span>
+            <label class="toggle">
+              <input type="checkbox" disabled />
+              <div class="slider"></div>
+            </label>
+          </div>
         </div>
       </div>
     </div>
