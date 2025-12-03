@@ -1,13 +1,13 @@
 .input {
   padding: 12px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-spacer-light);
+  border: var(--border-sm) solid var(--color-spacer-light);
   font-size: var(--text-sm);
   color: var(--color-black-900);
   background-color: var(--color-bg-white);
 
   &:focus {
-    outline: 1px solid var(--color-brand-primary);
+    outline: var(--border-sm) solid var(--color-brand-primary);
     border-color: var(--color-brand-primary);
   }
 
@@ -19,7 +19,7 @@
   }
 
   &.error {
-    outline: 1px solid var(--color-brand-secondary);
+    outline: var(--border-sm) solid var(--color-brand-secondary);
     border-color: var(--color-brand-secondary);
   }
 }

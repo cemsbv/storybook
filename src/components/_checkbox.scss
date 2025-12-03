@@ -5,14 +5,14 @@ input[type="checkbox"],
   width: 18px;
   height: 18px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-spacer-light);
+  border: var(--border-sm) solid var(--color-spacer-light);
   background: var(--color-brand-white);
   position: relative;
   display: inline-block;
   transition: border-color 0.15s ease;
 
   &:hover:not(:disabled) {
-    outline: 1px solid var(--color-spacer-light);
+    outline: var(--border-sm) solid var(--color-spacer-light);
     cursor: pointer;
   }
 
@@ -24,8 +24,8 @@ input[type="checkbox"],
     top: -2px;
     width: 6px;
     height: 11px;
-    border-right: 2px solid var(--color-brand-primary);
-    border-bottom: 2px solid var(--color-brand-primary);
+    border-right: var(--border-md) solid var(--color-brand-primary);
+    border-bottom: var(--border-md) solid var(--color-brand-primary);
     transform: scale(0) rotate(45deg);
     transform-origin: bottom left;
     transition: transform 0.15s ease-out;
@@ -39,11 +39,11 @@ input[type="checkbox"],
   &.error {
     border-color: var(--color-brand-secondary);
     &:hover:not(:disabled) {
-      outline: 1px solid var(--color-brand-secondary);
+      outline: var(--border-sm) solid var(--color-brand-secondary);
     }
     &::before {
-      border-right: 2px solid var(--color-brand-secondary);
-      border-bottom: 2px solid var(--color-brand-secondary);
+      border-right: var(--border-md) solid var(--color-brand-secondary);
+      border-bottom: var(--border-md) solid var(--color-brand-secondary);
     }
   }
 

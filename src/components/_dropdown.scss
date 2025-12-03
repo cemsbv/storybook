@@ -1,7 +1,7 @@
 select {
   appearance: base-select;
   background-color: var(--color-brand-white);
-  border: 1px solid var(--color-border);
+  border: var(--border-sm) solid var(--color-border);
   padding: 0.75rem;
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);
@@ -21,14 +21,14 @@ select {
   }
 
   &:hover:not(:disabled) {
-    outline: 1px solid var(--color-border);
+    outline: var(--border-sm) solid var(--color-border);
   }
 
   option {
     background: var(--color-brand-white);
     padding: 0.75rem;
     transition: 0.2s;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: var(--border-sm) solid var(--color-border);
 
     &:first-of-type {
       border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -63,9 +63,9 @@ select {
   }
 
   &.error {
-    border: 2px solid var(--color-brand-secondary);
+    border: var(--border-md) solid var(--color-brand-secondary);
     &:hover {
-      outline: 1px solid var(--color-brand-secondary);
+      outline: var(--border-sm) solid var(--color-brand-secondary);
     }
   }
 
@@ -83,7 +83,7 @@ select {
   // Styling the popup dropdown list (only works in some browsers)
   &::picker(select) {
     appearance: base-select;
-    border: 1px solid var(--color-border);
+    border: var(--border-sm) solid var(--color-border);
     background: var(--color-brand-white);
     border-radius: var(--radius-sm);
     top: calc(anchor(bottom) + 0.25rem);
