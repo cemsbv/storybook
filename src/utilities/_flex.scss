@@ -10,6 +10,12 @@
 .items-center {
   align-items: center;
 }
+.item-start {
+  align-items: flex-start;
+}
+.items-start {
+  align-items: flex-start;
+}
 .justify-center {
   justify-content: center;
 }
@@ -18,4 +24,10 @@
 }
 .justify-around {
   justify-content: space-around;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-start {
+  justify-content: flex-start;
 }
