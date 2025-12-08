@@ -21,6 +21,9 @@
   &.error {
     outline: var(--border-sm) solid var(--color-brand-secondary);
     border-color: var(--color-brand-secondary);
+    &:focus {
+      outline: var(--border-md) solid var(--color-brand-secondary);
+    }
   }
 }
 

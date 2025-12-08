@@ -100,8 +100,8 @@ output:before {
   width: 2rem;
   background: inherit;
   --e: var(--val);
-  transition: --e 0.1s ease-out;
-  rotate: calc((var(--e) - var(--val)) * 2deg);
+  // transition: --e 0.1s ease-out;
+  // rotate: calc((var(--e) - var(--val)) * 2deg);
   transform-origin: 50% calc(100% + var(--s) / 2);
   border-bottom: var(--t) solid #0000;
   border-radius: var(--r) / var(--r) var(--r) calc(var(--r) + var(--t))
@@ -117,8 +117,9 @@ output.bottom:before {
   position-area: bottom;
   border-top: var(--t) solid #0000;
   border-bottom: none;
-  rotate: calc((var(--val) - var(--e)) * 2deg);
-  transform-origin: 50% calc(var(--s) / -2);
+  // The wiggly animation
+  // rotate: calc((var(--val) - var(--e)) * 2deg);
+  // transform-origin: 50% calc(var(--s) / -2);
   border-radius: var(--r) / calc(var(--r) + var(--t)) calc(var(--r) + var(--t))
     var(--r) var(--r);
   --_m: 0% / var(--t) calc(var(--t) + 1px) no-repeat;
