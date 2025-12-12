@@ -187,19 +187,17 @@
           <div class="flex flex-row gap-xl w-full">
             <div class="flex flex-col gap-md">
               <p>Small dropdown</p>
-              <form>
-                <select class="dropdown-sm">
-                  <option value="Option 1">
-                    <span>Option 1</span>
-                  </option>
-                  <option value="Option 2">
-                    <span>Option 2</span>
-                  </option>
-                  <option value="Option length">
-                    <span>Option 3</span>
-                  </option>
-                </select>
-              </form>
+              <select class="dropdown-sm">
+                <option value="Option 1">
+                  <span>Option 1</span>
+                </option>
+                <option value="Option 2">
+                  <span>Option 2</span>
+                </option>
+                <option value="Option length">
+                  <span>Option 3</span>
+                </option>
+              </select>
             </div>
             <div class="flex flex-col gap-md">
               <p>Medium dropdown</p>
@@ -401,6 +399,64 @@
               </td>
             </tr>
           </table>
+        </div>
+
+        <!-- Split button -->
+        <div
+          class="flex flex-col gap-md p-2xl m-xl bg-color-brand-white rounded-sm border-sm"
+        >
+          <h2>Split button</h2>
+          <div class="flex flex-row gap-xl">
+            <div class="flex flex-col gap-sm">
+              <span>Split button large</span>
+              <div class="split-btn">
+                <!-- The size of this button will determine the size of the whole split button component -->
+                <button class="btn btn-lg btn-primary">Save project</button>
+                <select>
+                  <!-- We put an empty button here so that the dropdown doesn't render the default value -->
+                  <button></button>
+                  <option>
+                    <!-- Use the same button size here as the one in the primary button -->
+                    <button class="btn-secondary btn-lg">Load project</button>
+                  </option>
+                  <option>
+                    <button class="btn-secondary btn-lg">New project</button>
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col gap-sm">
+              <span>Split button medium</span>
+              <div class="split-btn">
+                <button class="btn btn-md btn-primary">Save project</button>
+                <select>
+                  <button></button>
+                  <option>
+                    <button class="btn-secondary btn-md">Load project</button>
+                  </option>
+                  <option>
+                    <button class="btn-secondary btn-md">New project</button>
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-sm">
+              <span>Split button small</span>
+              <div class="split-btn">
+                <button class="btn btn-sm btn-primary">Save project</button>
+                <select>
+                  <button></button>
+                  <option>
+                    <button class="btn-secondary btn-sm">Load project</button>
+                  </option>
+                  <option>
+                    <button class="btn-secondary btn-sm">New project</button>
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Toggle button -->

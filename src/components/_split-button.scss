@@ -1,0 +1,51 @@
+.split-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  height: fit-content;
+  width: fit-content;
+
+  .btn {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  select {
+    appearance: base-select;
+    width: fit-content;
+
+    border: var(--border-md) solid var(--color-border);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &:hover:not(:disabled) {
+      outline: var(--border-sm) solid var(--color-border);
+    }
+
+    &::picker-icon {
+      margin: 0;
+    }
+
+    option {
+      padding: 0;
+
+      &:last-of-type {
+        border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+        border: none;
+      }
+    }
+  }
+
+  &:has(.btn-lg) select {
+    padding: 0.6rem 1rem;
+  }
+
+  &:has(.btn-md) select {
+    padding: 0.5rem 0.8rem;
+  }
+
+  &:has(.btn-sm) select {
+    padding: 0.25rem 0.6rem;
+  }
+}
